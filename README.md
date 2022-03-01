@@ -13,6 +13,31 @@ I plan to visualize what the commuter experience could look like if abandoned el
 
 I plan to examine the MTA card swipe data before, during, and 'after' the COVID pandemic in relation to the socioeconomic status of the neighborhoods serviced. This will help highlight equity disparities in NYC and what factors play into these disparities.
 
+## Outline (WIP)
+### Intro
+- Help viewer understand "Segregation by Design" in NYC
+- Show current inequities from neighborhood to neighborhood
+### Part 1
+- Visualize MTA ridership before (perhaps much before), during, and 'after' COVID-19 Pandemic
+- Show which neighborhoods and stops are being utilized or avoided throughout pandemic
+### Part 2
+- How does this play into current inequities in cities? Visualize this
+
+## Talk
+- What if scenarios: 
+- data vs maps re: redlining
+- sweet spot: timeliness (potential social justice areas, pablo's work)
+  - prioritization based on need
+- redlining -> priority areas (don't need citywide analysis)
+- new paths forward ()
+- highline - changed the neighborhood completely - vacant before highline 
+  - 'revitalize' a neighborhood, use 5th ave and call it a 'park'
+- what does a silent city look like? no cars (designer - Hehe, RUHR, East Williamsburg)
+  - zillo data, real estate data, etc.
+- Continue to test the turnstile piece (pandemic timeline, labor, critical workers [history of labor and exploitation])
+- looking into dimensions of MTA swipes (metadata/data structure analysis)
+
+
 ## Data Sources
 
 NYC Open Data
@@ -20,6 +45,7 @@ NYC Open Data
 - NYC Subway Lines: https://data.cityofnewyork.us/Transportation/Subway-Lines/3qz8-muuu
 - NYC Poverty Data: https://www1.nyc.gov/site/opportunity/poverty-in-nyc/poverty-data.page
 - NYC Transit Zones: https://www1.nyc.gov/site/planning/data-maps/open-data.page
+- Look into potential social justice areas
 
 
 
