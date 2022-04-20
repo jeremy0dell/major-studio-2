@@ -1,0 +1,11 @@
+#app {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr;
+
+  background-color: #2b2b2b;
+  color: white;
+}
+
+#train {
+  border-top: 1px solid white;
+}
