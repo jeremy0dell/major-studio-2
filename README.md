@@ -37,6 +37,10 @@ I plan to examine the MTA card swipe data before, during, and 'after' the COVID 
 - Continue to test the turnstile piece (pandemic timeline, labor, critical workers [history of labor and exploitation])
 - looking into dimensions of MTA swipes (metadata/data structure analysis)
 
+## LoFi Mockups
+![Alt text](/LoFi%20Mockups/MacBook%20Pro%2016_%20-%201.png "Optional Title")
+![Alt text](/LoFi%20Mockups/MacBook%20Pro%2016_%20-%202.png "Optional Title")
+![Alt text](/LoFi%20Mockups/MacBook%20Pro%2016_%20-%203.png "Optional Title")
 
 ## Data Sources
 
