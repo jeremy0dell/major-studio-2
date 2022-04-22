@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import cloneDeep from "lodash/cloneDeep"
-import { v4 as uuidv4 } from 'uuid'
 
 import useWindowSize from './hooks/useWindowSize';
 
@@ -10,14 +9,10 @@ import MapChart from './components/MapChart';
 import {
   createGridTrain,
   scanTrain,
-  peopleToAdd,
-  peopleToRemove
+  handleEgress,
+  handleMoveSeats,
+  handleBoard
 } from './logic/trainHandlers';
-import {
-  findIndexOfPerson,
-  getClosestPoint,
-  sampleFromProportions
-} from './logic/helpers';
 import * as C from './logic/constants'
 import { stops } from './logic/data'
 
@@ -34,10 +29,15 @@ function App() {
   const [currentStop, setCurrentStop] = useState(0)
   const [action, setAction] = useState('')
 
+  const updateState = (boardedCopy, totalCopy, newGridTrain) => {
+    setPeopleBoarded(boardedCopy)
+    setPeopleTotal(totalCopy)
+    setGridTrain(newGridTrain)
+  }
+
   useEffect(() => {
     const {
       newGridTrain,
-      occupiedSeats,
       occupiedSpaces,
       occupiedAreas,
       availableSeats,
@@ -49,119 +49,40 @@ function App() {
     
     switch (action) {
       case C.egress:
-        // find how many people to be removed
-        const toRemove = peopleToRemove(stops[currentStop], newGridTrain)
-        console.log('removing this many:', toRemove, 'from', occupiedAreas)
+        var { boarded, total, train } = handleEgress(
+          newGridTrain,
+          boardedCopy,
+          totalCopy,
+          occupiedAreas,
+          stops,
+          currentStop
+        )
 
-        for (var i = 0; i < toRemove; i++) {
-          var randIdx = Math.floor(occupiedAreas.length * Math.random())
-          occupiedAreas[randIdx].occupant['exit'] = currentStop
-
-          var boardedIdx = findIndexOfPerson(boardedCopy, occupiedAreas[randIdx].occupant)
-          var totalIdx = findIndexOfPerson(totalCopy, occupiedAreas[randIdx].occupant)
-
-          boardedCopy.splice(boardedIdx, 1)
-          totalCopy[totalIdx].occupant = occupiedAreas[randIdx].occupant
-
-          occupiedAreas[randIdx].occupant = null
-          occupiedAreas.splice(randIdx, 1)
-        }
-
-        setPeopleBoarded(boardedCopy)
-        setPeopleTotal(totalCopy)
-        setGridTrain(newGridTrain)
-
+        updateState(boarded, total, train)
         break
       case C.moveSeats:
-        // go thru available Seats and if there is an occupied space, swap em
-        console.log('available is', availableSeats)
-        console.log('occupied is', occupiedSpaces)
+        var { boarded, total, train } = handleMoveSeats(
+          newGridTrain,
+          totalCopy,
+          boardedCopy,
+          availableSeats,
+          occupiedSpaces
+        )
 
-        while (availableSeats.length && occupiedSpaces.length) {
-          if (!occupiedSpaces.length) break
-
-          var randSpaceIdx = Math.floor(occupiedSpaces.length * Math.random())
-          // var randSeatIdx = Math.floor(availableSeats.length * Math.random())
-          var closestSeat = getClosestPoint(occupiedSpaces[randSpaceIdx], availableSeats)
-          var idxToRemove = findIndexOfPerson(availableSeats, { x: closestSeat.x, y: closestSeat.y })
-
-          console.log(
-            'closest seat to space',
-            occupiedSpaces[randSpaceIdx],
-            'is',
-            closestSeat,
-            'and the index to eventually remove is',
-            idxToRemove,
-            'and the distance moved is',
-            Math.abs(occupiedSpaces[randSpaceIdx].x - closestSeat.x)
-          )
-
-          // this swaps the occupants space in gridTrain
-          closestSeat.occupant = occupiedSpaces[randSpaceIdx].occupant
-
-          //  arrays they are still in standing posn
-          // update copy person, newly seated person, total person
-          var boardedIdx = findIndexOfPerson(boardedCopy, occupiedSpaces[randSpaceIdx].occupant)
-          var totalIdx = findIndexOfPerson(totalCopy, occupiedSpaces[randSpaceIdx].occupant)
-
-          boardedCopy[boardedIdx].x = closestSeat.x
-          boardedCopy[boardedIdx].y = closestSeat.y
-
-          totalCopy[totalIdx].x = closestSeat.x
-          totalCopy[totalIdx].y = closestSeat.y
-
-          closestSeat.occupant.x = closestSeat.x
-          closestSeat.occupant.y = closestSeat.y
-
-          // set gridTrain space to null
-          occupiedSpaces[randSpaceIdx].occupant = null
-          // remove that occupied spaces and available seats
-          occupiedSpaces.splice(randSpaceIdx, 1)
-          availableSeats.splice(idxToRemove, 1)
-        }
-
-        setPeopleBoarded(boardedCopy)
-        setPeopleTotal(totalCopy)
-        setGridTrain(newGridTrain)
-        
+        updateState(boarded, total, train)
         break
       case C.board:
-        // find how many people are to be added
-        const toAdd = peopleToAdd(stops[currentStop], newGridTrain)
+        var { boarded, total, train } = handleBoard(
+          newGridTrain,
+          totalCopy,
+          boardedCopy,
+          availableSeats,
+          availableSpaces,
+          stops,
+          currentStop
+        )
 
-        // For each to be added, create a person, add them to peopleTotal, add them to seats if available, then to spaces if available
-        for (var i = 0; i < toAdd; i++) {
-          // create a person (other things to be added later)
-          var newPerson = {
-            id: uuidv4(),
-            gender: Math.random() > 0.7 ? 'female' : 'male',
-            race: sampleFromProportions(stops[currentStop][3]),
-            enter: currentStop,
-            exit: null
-          }
-          // console.log('this person has race:', sampleFromProportions(stops[currentStop][3]))
-          // if stuff
-          if (availableSeats.length) {
-            var randIdx = Math.floor(availableSeats.length * Math.random())
-            availableSeats[randIdx].occupant = newPerson
-            newPerson.x = availableSeats[randIdx].x
-            newPerson.y = availableSeats[randIdx].y
-            availableSeats.splice(randIdx, 1)
-          } else {
-            var randIdx = Math.floor(availableSpaces.length * Math.random())
-            availableSpaces[randIdx].occupant = newPerson
-            newPerson.x = availableSpaces[randIdx].x
-            newPerson.y = availableSpaces[randIdx].y
-            availableSpaces.splice(randIdx, 1)
-          }
-
-          boardedCopy.push(newPerson)
-          totalCopy.push(newPerson)
-        }
-
-        setPeopleBoarded(boardedCopy)
-        setPeopleTotal(totalCopy)
-        setGridTrain(newGridTrain)
+        updateState(boarded, total, train)
 
         // gender
         setGenderStack(genderStack.concat(

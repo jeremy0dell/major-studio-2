@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import * as d3 from 'd3'
-import { omit } from 'lodash'
 import { stops } from '../logic/data'
 import * as C from '../logic/constants'
 
@@ -12,12 +11,6 @@ const stripMapColor = (curr, i) => {
   } else {
     return "#231f20"
   }
-}
-
-// shape example
-// {stop: new Date(2015, 0, 1), apples: 3840, bananas: 1920, cherries: 960, dates: 400}
-const genderStack = (people) => {
-
 }
 
 const raceKeys = [
@@ -44,17 +37,14 @@ const MapChart = ({ height, width, currentStop, action, people, genderStack, rac
       const series = stacked(raceStack)
       console.log('ppl is now', series)
 
-      // color palette = one color per subgroup
-      var color = d3.scaleOrdinal()
-        .domain([0, 1])
-        .range(['#e41a1c','#377eb8','#4daf4a'])
-
       // console.log('hello', d3.max(series, layer => d3.max(layer, sequence => sequence[1])))
       var y = d3.scaleLinear()
         .domain([0, 180])
         .range([ dimensions.barHeight, 0 ]);
 
       if (circlesRef.current) {
+
+        // eslint-disable-next-line
         const selection = d3.select(circlesRef.current)
           .selectAll('g')
           .data(series)

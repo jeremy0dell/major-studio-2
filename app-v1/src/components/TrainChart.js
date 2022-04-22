@@ -27,23 +27,8 @@ const TrainChart = ({ height, width, people }) => {
     left: 400
   }
 
-  const peopleCircs = people.map(person => <circle
-    key={`${person.x},${person.y}`}
-    cx={person.x * C.squareSize + margin.left + 15}
-    cy={person.y * C.squareSize + margin.top + 15}
-    fill="white"
-    r={10}
-  />)
-
   return (
     <svg height={height} width={width}>
-      {/* <rect
-        width={C.width * C.squareSize}
-        height={C.height * C.squareSize}
-        transform={`translate(${margin.left} ${margin.top})`}
-        fill="lightgrey"
-      /> */}
-
       <image
         href={train}
         // height={200}
