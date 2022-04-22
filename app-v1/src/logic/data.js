@@ -1,5 +1,5 @@
 import * as C from './constants'
-import { getRandEl, randomIntFromInterval, getClosestEl } from './helpers'
+import { randomIntFromInterval, getClosestEl } from './helpers'
 
 // racial data
 const racial = [
