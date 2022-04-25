@@ -172,9 +172,9 @@ function App() {
             Or How I Learned To Stop Scrolling And Love The Bomb
           </h2>
         </div>
-        <div style={{ fontFamily: "'Helvetica'", height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+        {/* <div style={{ fontFamily: "'Helvetica'", height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
           <img style={{ height: '100%' }} src={transit} />
-        </div>
+        </div> */}
         <div style={{ fontFamily: "'Helvetica'", height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
           {windowSize.height && <Map
             height={'100%'}
