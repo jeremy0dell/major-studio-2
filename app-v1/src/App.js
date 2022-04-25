@@ -32,28 +32,13 @@ function App() {
   const [gridTrain, setGridTrain] = useState(createGridTrain(C.height, C.width, C.seatIdxs, C.doorIdxs))
   const [peopleBoarded, setPeopleBoarded] = useState([])
   const [peopleTotal, setPeopleTotal] = useState([])
+  // orchestration
+  const [isMoving, setIsMoving] = useState(false)
   // specific charts
   const [genderStack, setGenderStack] = useState([])
   const [raceStack, setRaceStack] = useState([])
   const [currentStop, setCurrentStop] = useState(0)
   const [action, setAction] = useState('')
-
-  const updateState = (boardedCopy, totalCopy, newGridTrain) => {
-    setPeopleBoarded(boardedCopy)
-    setPeopleTotal(totalCopy)
-    setGridTrain(newGridTrain)
-  }
-
-  const introduceTrain = () => {
-    const map = d3.select('#map')
-    const train = d3.select('#train')
-
-    map.transition().duration(1500)
-      .style('height', '50vh')
-
-    train.transition().duration(1500)
-      .style('height', '50vh')
-  }
 
   useEffect(() => {
     const {
@@ -117,14 +102,9 @@ function App() {
         setRaceStack(genderStack.concat({
           stop: currentStop,
           ...boardedCopy.reduce((acc, next) => {
-            if (!acc[next.race]) {
-              acc[next.race] = 1
-            } else {
-              acc[next.race] += 1
-            }
-
+            acc[next.race] += 1
             return acc
-          }, {})
+          }, cloneDeep(C.emptyRaces))
         }))
 
         break
@@ -133,12 +113,56 @@ function App() {
     }
   }, [action])
 
+  const updateState = (boardedCopy, totalCopy, newGridTrain) => {
+    setPeopleBoarded(boardedCopy)
+    setPeopleTotal(totalCopy)
+    setGridTrain(newGridTrain)
+  }
+
+  const introduceTrain = () => {
+    const map = d3.select('#map')
+    const train = d3.select('#train')
+
+    map.transition().duration(1500)
+      .style('height', '50vh')
+
+    train.transition().duration(1500)
+      .style('height', '50vh')
+  }
+
+  const moveFirstStep = () => {
+    setIsMoving(true)
+    setAction(C.board)
+
+    setTimeout(() => {
+      setCurrentStop(currentStop + 1)
+      setIsMoving(false)
+    }, 2000)
+  }
+
+  const moveMiddleSteps = () => {
+    setIsMoving(true)
+    setAction(C.egress)
+    setTimeout(() => setAction(C.moveSeats), 2500)
+    setTimeout(() => setAction(C.board), 4500)
+    setTimeout(() => {
+      setCurrentStop(currentStop + 1)
+      setIsMoving(false)
+    }, 6500)
+  }
+
+  const stepHandlers = [
+    introduceTrain,
+    moveFirstStep,
+    moveMiddleSteps
+  ]
+
   return (
     <div id="app">
       <div
         id="map"
         style={{ height: '100vh' }}
-        // className={'flex-column'}
+      // className={'flex-column'}
       >
         <div style={{ fontFamily: "'Helvetica'", height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
           <h1 style={{ fontSize: 100 }}>
@@ -166,16 +190,17 @@ function App() {
           people={peopleBoarded}
           genderStack={genderStack}
           raceStack={raceStack}
-          introduceTrain={introduceTrain}
+          stepHandlers={stepHandlers}
+          isMoving={isMoving}
         />}
-        <div style={{ display: 'flex' }}>
+        {/* <div style={{ display: 'flex' }}>
           {'current action: ' + action + ', stop #' + currentStop + ' - ' + stops[currentStop][0]}
           <button onClick={() => setAction('egress')}>set action egress</button>
           <button onClick={() => setAction('moveSeats')}>set action moveSeats</button>
           <button onClick={() => setAction('board')}>set action board</button>
           <button onClick={() => setCurrentStop(currentStop + 1)}>set stop +1</button>
           <button onClick={introduceTrain}>introduceTrain</button>
-        </div>
+        </div> */}
       </div>
       <div id="train" style={{ height: '0vh' }}>
         {windowSize.height && <TrainChart
