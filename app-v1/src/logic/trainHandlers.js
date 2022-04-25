@@ -192,39 +192,3 @@ export const handleBoard = (train, total, boarded, availableSeats, availableSpac
 
   return { boarded, total, train }
 }
-
-
-/*
-    FUNCTIONS/HELPERS TO FILL THE TRAIN
-
-*/
-
-// takes curr train
-// returns {availableSeats, spacesArr}
-
-// fills train randomly
-// takes curr train, peopleBoarded, amountToAdd
-// export function fillTrain(seatsArr, spacesArr, peopleArr, amountToAdd) {
-//     //temp array for testing
-//     for (var i = 0; i < amountToAdd; i++) {
-//         var newRider = { start: stopIdx, stop: 'test' }
-
-//         if (seatsArr.length) {
-//             var randIdx = Math.floor(seatsArr.length * Math.random())
-//             seatsArr[randIdx].occupant = newRider
-//             //for testing start
-//             peopleArr.push({...seatsArr[randIdx].occupant, x: seatsArr[randIdx].x, y: seatsArr[randIdx].y })
-//             //for testing end
-//             seatsArr.splice(randIdx, 1)
-//         } else {
-//             var randIdx = Math.floor(spacesArr.length * Math.random())
-//             spacesArr[randIdx].occupant = newRider
-//             //for testing start
-//             peopleArr.push({...spacesArr[randIdx].occupant, x: spacesArr[randIdx].x, y: spacesArr[randIdx].y })
-//             //for testing end
-//             spacesArr.splice(randIdx, 1)    
-//         }
-//     }
-
-//     console.log('adding these people', peopleArr)
-// }

@@ -5,7 +5,7 @@ import { enterFn, updateFn, exitFn } from "../logic/data"
 import * as C from '../logic/constants'
 import train from '../assets/images/grid.svg'
 
-const TrainChart = ({ height, width, people }) => {
+const TrainChart = ({ height, width, people, innerRef }) => {
   const peopleRef = useRef(null)
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const TrainChart = ({ height, width, people }) => {
   }
 
   return (
-    <svg height={height} width={width}>
+    <svg height={height} width={width} ref={innerRef}>
       <image
         href={train}
         // height={200}
