@@ -1,4 +1,8 @@
 /* make app fit screen */
+html {
+  overflow-y: hidden;
+}
+
 body > #root > div {
   height: 100vh;
 }

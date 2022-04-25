@@ -1,10 +1,12 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import cloneDeep from "lodash/cloneDeep"
+import * as d3 from 'd3'
 
 import useWindowSize from './hooks/useWindowSize';
 
 import TrainChart from './components/TrainChart';
 import MapChart from './components/MapChart';
+import Map from './components/Map';
 
 import {
   createGridTrain,
@@ -16,10 +18,17 @@ import {
 import * as C from './logic/constants'
 import { stops } from './logic/data'
 
+import transit from './assets/images/transit.png'
+
 import './App.css';
 
 function App() {
+
+  // sizing
   const windowSize = useWindowSize()
+  const mapRef = useRef(null)
+  const trainRef = useRef(null)
+  // train state
   const [gridTrain, setGridTrain] = useState(createGridTrain(C.height, C.width, C.seatIdxs, C.doorIdxs))
   const [peopleBoarded, setPeopleBoarded] = useState([])
   const [peopleTotal, setPeopleTotal] = useState([])
@@ -35,6 +44,17 @@ function App() {
     setGridTrain(newGridTrain)
   }
 
+  const introduceTrain = () => {
+    const map = d3.select('#map')
+    const train = d3.select('#train')
+
+    map.transition().duration(1500)
+      .style('height', '50vh')
+
+    train.transition().duration(1500)
+      .style('height', '50vh')
+  }
+
   useEffect(() => {
     const {
       newGridTrain,
@@ -46,7 +66,7 @@ function App() {
 
     let boardedCopy = cloneDeep(peopleBoarded)
     let totalCopy = cloneDeep(peopleTotal)
-    
+
     switch (action) {
       case C.egress:
         var { boarded, total, train } = handleEgress(
@@ -115,15 +135,38 @@ function App() {
 
   return (
     <div id="app">
-      <div id="map" className={'flex-column'}>
+      <div
+        id="map"
+        style={{ height: '100vh' }}
+        // className={'flex-column'}
+      >
+        <div style={{ fontFamily: "'Helvetica'", height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+          <h1 style={{ fontSize: 100 }}>
+            Transit Meditations
+          </h1>
+          <h2 style={{ fontSize: 60 }}>
+            Or How I Learned To Stop Scrolling And Love The Bomb
+          </h2>
+        </div>
+        <div style={{ fontFamily: "'Helvetica'", height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+          <img style={{ height: '100%' }} src={transit} />
+        </div>
+        <div style={{ fontFamily: "'Helvetica'", height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+          {windowSize.height && <Map
+            height={'100%'}
+            width={windowSize.width}
+          />}
+        </div>
         {windowSize.height && <MapChart
-          height={windowSize.height / 2}
+          innerRef={mapRef}
+          height={'100%'}
           width={windowSize.width}
           currentStop={currentStop}
           action={action}
           people={peopleBoarded}
           genderStack={genderStack}
           raceStack={raceStack}
+          introduceTrain={introduceTrain}
         />}
         <div style={{ display: 'flex' }}>
           {'current action: ' + action + ', stop #' + currentStop + ' - ' + stops[currentStop][0]}
@@ -131,11 +174,13 @@ function App() {
           <button onClick={() => setAction('moveSeats')}>set action moveSeats</button>
           <button onClick={() => setAction('board')}>set action board</button>
           <button onClick={() => setCurrentStop(currentStop + 1)}>set stop +1</button>
+          <button onClick={introduceTrain}>introduceTrain</button>
         </div>
       </div>
-      <div id="train">
+      <div id="train" style={{ height: '0vh' }}>
         {windowSize.height && <TrainChart
-          height={windowSize.height / 2}
+          innerRef={trainRef}
+          height={'100%'}
           width={windowSize.width}
           people={peopleBoarded}
         />}

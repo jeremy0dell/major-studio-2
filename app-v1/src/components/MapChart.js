@@ -24,7 +24,7 @@ const raceKeys = [
   'Population of two or more races:',
 ]
 
-const MapChart = ({ height, width, currentStop, action, people, genderStack, raceStack }) => {
+const MapChart = ({ height, width, currentStop, action, people, genderStack, raceStack, innerRef, introduceTrain }) => {
   const circlesRef = useRef(null)
 
   useEffect(() => {
@@ -76,15 +76,7 @@ const MapChart = ({ height, width, currentStop, action, people, genderStack, rac
 
               update => update,
               exit => exit
-
-            
-            // 'rect'
-          )
-          // .attr('fill', (d, i) => color(i))
-          
-
-        // console.log(selection)
-
+          )          
       }
     }
   }, [people])
@@ -124,7 +116,7 @@ const MapChart = ({ height, width, currentStop, action, people, genderStack, rac
   )
 
   return (
-    <svg height={height} width={width}>
+    <svg height={height} width={width} ref={innerRef}>
       <g transform={`translate(${margins.left},${margins.top})`} ref={circlesRef}>
         <rect
           width={dimensions.width + dimensions.paddingSides * 4}
@@ -134,6 +126,7 @@ const MapChart = ({ height, width, currentStop, action, people, genderStack, rac
           fill="#a8a9ac"
         />
         {stopCircs}
+        <circle cx="100" cy="400" r="10" fill="white" onClick={introduceTrain} />
       </g>
     </svg>
   )
