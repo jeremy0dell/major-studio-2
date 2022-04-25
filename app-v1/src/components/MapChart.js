@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import * as d3 from 'd3'
 import { stops } from '../logic/data'
 import * as C from '../logic/constants'
@@ -13,18 +13,32 @@ const stripMapColor = (curr, i) => {
   }
 }
 
-const raceKeys = [
-  'Hispanic or Latino',
-  'White alone',
-  'Black or African American alone',
-  'American Indian and Alaska Native alone',
-  'Asian alone',
-  'Native Hawaiian and Other Pacific Islander alone',
-  'Some Other Race alone',
-  'Population of two or more races:',
-]
+const ArrowPath = ({ transform, isGlowing }) =>
+  <path
+    transform={transform}
+    style={{
+      // background: isGlowing ? '#FF9C28' : '',
+      filter: !isGlowing ? 'drop-shadow(0px 0px 4.63545px #FFAA33) drop-shadow(0px 0px 2.64883px #FFAA33) drop-shadow(0px 0px 1.54515px #FFAA33) drop-shadow(0px 0px 0.772575px #FFAA33) drop-shadow(0px 0px 0.220736px #FFAA33) drop-shadow(0px 0px 0.110368px #FFAA33)' : ''
+    }}
+    d="M39.4853 12.0238C38.9208 11.5325 38.0805 11.5325 37.516 12.0237L35.2762 13.9727C34.5895 14.5702 34.589 15.6368 35.2752 16.235L48.8614 28.0779C49.9066 28.989 49.2622 30.7087 47.8758 30.7087H14.334C13.5056 30.7087 12.834 31.3802 12.834 32.2087V34.792C12.834 35.6204 13.5056 36.292 14.334 36.292H47.8758C49.2622 36.292 49.9066 38.0117 48.8614 38.9227L35.2752 50.7657C34.589 51.3638 34.5895 52.4304 35.2762 53.028L37.516 54.9769C38.0805 55.4681 38.9208 55.4681 39.4853 54.9769L62.8668 34.6319C63.554 34.034 63.554 32.9666 62.8668 32.3687L39.4853 12.0238Z"
+    fill="#FF9C28"
+  />
 
-const MapChart = ({ height, width, currentStop, action, people, genderStack, raceStack, innerRef, introduceTrain }) => {
+const ArrowText = ({ step }) =>
+  <text
+    fill="white"
+    fontSize="20px"
+    fontFamily="Helvetica"
+    transform="translate(-25 0)"
+  >
+    { step === 0 ? 'Begin Simulation' : 'Go to Next Station' }
+  </text>
+
+
+
+const MapChart = ({ height, width, currentStop, action, people, genderStack, raceStack, innerRef, stepHandlers, isMoving }) => {
+  const [step, setStep] = useState(0)
+  // const [isGlowing, setIsGlowing] = useState(true)
   const circlesRef = useRef(null)
 
   useEffect(() => {
@@ -32,7 +46,7 @@ const MapChart = ({ height, width, currentStop, action, people, genderStack, rac
       console.log(Object.keys(raceStack[0]).slice(1))
 
       const stacked = d3.stack()
-        .keys(raceKeys)
+        .keys(C.raceKeys)
 
       const series = stacked(raceStack)
       console.log('ppl is now', series)
@@ -40,7 +54,7 @@ const MapChart = ({ height, width, currentStop, action, people, genderStack, rac
       // console.log('hello', d3.max(series, layer => d3.max(layer, sequence => sequence[1])))
       var y = d3.scaleLinear()
         .domain([0, 180])
-        .range([ dimensions.barHeight, 0 ]);
+        .range([dimensions.barHeight, 0]);
 
       if (circlesRef.current) {
 
@@ -57,7 +71,7 @@ const MapChart = ({ height, width, currentStop, action, people, genderStack, rac
                 console.log(d, i, a)
                 return (dimensions.width / stops.length) * (i + 1) - 40 + dimensions.paddingSides * 1.5
               })
-              
+
               .attr('width', 30)
               //transition stuff
               .attr('height', 0)
@@ -74,9 +88,9 @@ const MapChart = ({ height, width, currentStop, action, people, genderStack, rac
                 return y(d[1]) - dimensions.barHeight
               }),
 
-              update => update,
-              exit => exit
-          )          
+            update => update,
+            exit => exit
+          )
       }
     }
   }, [people])
@@ -84,14 +98,19 @@ const MapChart = ({ height, width, currentStop, action, people, genderStack, rac
     height: 40,
     width: width * 0.8,
     paddingSides: 15,
-    barHeight: 40*6
+    barHeight: 40 * 6
   }
 
-  console.log(dimensions)
+  console.log(dimensions.width)
 
   const margins = {
     top: dimensions.height * 6,
     left: width * 0.1
+  }
+
+  const stepper = (i) => {
+    stepHandlers[step > 2 ? 2 : step]()
+    setStep(step + 1)
   }
 
   const stopCircs = stops.map((stop, i) =>
@@ -106,7 +125,7 @@ const MapChart = ({ height, width, currentStop, action, people, genderStack, rac
         fill="white"
         fontSize="20px"
         fontFamily="Helvetica"
-        transform={`translate(${((dimensions.width / stops.length) * (i + 1) - 30)+ dimensions.paddingSides*1.5},${dimensions.height + 15}) rotate(45)`}
+        transform={`translate(${((dimensions.width / stops.length) * (i + 1) - 30) + dimensions.paddingSides * 1.5},${dimensions.height + 15}) rotate(45)`}
       >
         {stop[0]}
       </text>
@@ -117,7 +136,7 @@ const MapChart = ({ height, width, currentStop, action, people, genderStack, rac
 
   return (
     <svg height={height} width={width} ref={innerRef}>
-      <g transform={`translate(${margins.left},${margins.top})`} ref={circlesRef}>
+      <g transform={`translate(${margins.left * 0.25},${margins.top})`} ref={circlesRef}>
         <rect
           width={dimensions.width + dimensions.paddingSides * 4}
           height={dimensions.height}
@@ -126,8 +145,22 @@ const MapChart = ({ height, width, currentStop, action, people, genderStack, rac
           fill="#a8a9ac"
         />
         {stopCircs}
-        <circle cx="100" cy="400" r="10" fill="white" onClick={introduceTrain} />
       </g>
+      <g
+        transform={`translate(${width / 1.125} ${margins.top / 1.1})`}
+        style={{ cursor: 'pointer' }}
+        // onClick={step > 2 ? stepper(2) : stepper(step)}
+        onClick={() => {
+          stepper(step)
+        }}
+      >
+        {!isMoving ? <ArrowText step={step} /> : ''}
+        <ArrowPath
+          isGlowing={isMoving}
+          transform={`scale(1.25 1.25)`}
+        />
+      </g>
+
     </svg>
   )
 }
