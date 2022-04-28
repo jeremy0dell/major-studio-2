@@ -1,10 +1,9 @@
 import { useEffect, useRef } from "react"
 import * as d3 from 'd3'
 
-import { enterFn, updateFn, exitFn, colors, transitionColors } from "../logic/data"
+import { enterFn, updateFn, exitFn, transitionColors } from "../logic/data"
 import * as C from '../logic/constants'
 import train from '../assets/images/grid.svg'
-import { transition } from "d3"
 import { bind_trailing_args } from "../logic/helpers"
 
 const TrainChart = ({ height, width, people, currentMapChart }) => {
@@ -31,14 +30,12 @@ const TrainChart = ({ height, width, people, currentMapChart }) => {
         .data(people, d => d.id)
 
         transitionColors(peopleSelection, currentMapChart)
-
-      console.log('hello selection:', peopleSelection)
     }
   }, [currentMapChart])
 
   const margin = {
     top: 100,
-    left: 400
+    left:( width / 2) - ((C.width * C.squareSize) / 2)
   }
 
   return (
