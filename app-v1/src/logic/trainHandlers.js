@@ -165,8 +165,9 @@ export const handleBoard = (train, total, boarded, availableSeats, availableSpac
     // create a person (other things to be added later)
     var newPerson = {
       id: uuidv4(),
-      gender: Math.random() > 0.7 ? 'female' : 'male',
+      gender: Math.random() > 0.5001 ? 'female' : 'male',
       race: sampleFromProportions(stops[currentStop][3]),
+      income: sampleFromProportions(stops[currentStop][4]),
       enter: currentStop,
       exit: null
     }
