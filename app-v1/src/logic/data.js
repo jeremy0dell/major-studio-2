@@ -596,13 +596,13 @@ export const stops = [
  */
 
 // enter
-export const enterFn = enter => enter
+export const enterFn = (enter, chartType) => enter
   .append('circle')
     // .attr('cx', () => getRandEl(C.doorIdxs) * C.squareSize)
     .attr('cx', d => getClosestEl(d.x, C.doorIdxs) * C.squareSize)
     .attr('cy', C.height * C.squareSize + C.squareSize)
     .attr('r', C.squareSize / 3)
-    .attr('fill', d => raceColors(d.race))
+    .attr('fill', d => chartTypeInfo[chartType].colors(d[chartType]))
     .attr('opacity', 0)
   .transition()
   .duration(250)
@@ -644,6 +644,43 @@ export const updateFn = update => update
     .attr('cy', d => (d.y * C.squareSize) + C.squareSize / 2)
 
   
+
+// map chart handlers
+
+export const chartSeries = (keys, stack) => {
+  const stacked = d3.stack()
+    .keys(keys)
+
+  const series = stacked(stack)
+
+  return series
+}
+
 // Colors
 export const raceColors = d3.scaleOrdinal(d3.schemeCategory10)
   .domain(C.raceKeys)
+
+export const incomeColors = d3.scaleOrdinal(d3.schemePaired)
+  .domain(C.incomeKeys)  
+
+export const colors = {
+  race: raceColors,
+  income: incomeColors
+}
+
+export const chartTypeInfo = {
+  race: {
+    colors: raceColors,
+    keys: C.raceKeys,
+    
+  },
+  income: {
+    colors: incomeColors,
+    keys: C.incomeKeys
+  }
+}
+
+export const transitionColors = (selection, chartType) => selection
+  .transition()
+  .duration(1000)
+  .attr('fill', (d) => chartTypeInfo[chartType].colors(d[chartType]))
