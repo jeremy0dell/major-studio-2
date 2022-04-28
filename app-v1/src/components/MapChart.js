@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
 import * as d3 from 'd3'
-import { stops } from '../logic/data'
 import * as C from '../logic/constants'
+
+import { stops, raceColors } from '../logic/data'
+
 
 const stripMapColor = (curr, i) => {
   if (curr === i) {
@@ -36,21 +38,28 @@ const ArrowText = ({ step }) =>
 
 
 
-const MapChart = ({ height, width, currentStop, action, people, genderStack, raceStack, innerRef, stepHandlers, isMoving }) => {
+const MapChart = ({
+  height,
+  width,
+  currentStop,
+  action,
+  people,
+  raceStack,
+  stepHandlers,
+  isMoving,
+  currentMapChart,
+  setCurrentMapChart
+}) => {
   const [step, setStep] = useState(0)
   // const [isGlowing, setIsGlowing] = useState(true)
   const circlesRef = useRef(null)
 
   useEffect(() => {
     if (action === C.board) {
-      console.log(Object.keys(raceStack[0]).slice(1))
-
       const stacked = d3.stack()
         .keys(C.raceKeys)
 
       const series = stacked(raceStack)
-      console.log('ppl is now', series)
-
       // console.log('hello', d3.max(series, layer => d3.max(layer, sequence => sequence[1])))
       var y = d3.scaleLinear()
         .domain([0, 180])
@@ -63,33 +72,30 @@ const MapChart = ({ height, width, currentStop, action, people, genderStack, rac
           .selectAll('g')
           .data(series)
           .join('g')
-          .attr('fill', (d, i) => d3.schemeCategory10[i])
+          .attr('fill', (d, i) => raceColors(d.key))
           .selectAll('rect').data(d => d)
           .join(
             enter => enter.append('rect')
-              .attr('x', (d, i, a) => {
-                console.log(d, i, a)
-                return (dimensions.width / stops.length) * (i + 1) - 40 + dimensions.paddingSides * 1.5
-              })
-
+              .attr('x', (d, i, a) => (dimensions.width / stops.length) * (i + 1) - 40 + dimensions.paddingSides * 1.5)
               .attr('width', 30)
-              //transition stuff
               .attr('height', 0)
-              .attr('y', (d, i) => {
-                // console.log(d, i)
-                return 0
-              })
+              .attr('y', 0)
+              // transition stuff
               .transition()
               .duration(1000)
               .delay(2000)
               .attr('height', d => y(d[0]) - y(d[1]))
-              .attr('y', (d, i) => {
-                // console.log(d, i)
-                return y(d[1]) - dimensions.barHeight
-              }),
+              .attr('y', (d, i) => y(d[1]) - dimensions.barHeight),
 
             update => update,
             exit => exit
+              .transition()
+              .duration(1000)
+              .delay(2000)
+              .attr('height', 0)
+              .attr('y', 0)
+              .remove()
+
           )
       }
     }
@@ -100,8 +106,6 @@ const MapChart = ({ height, width, currentStop, action, people, genderStack, rac
     paddingSides: 15,
     barHeight: 40 * 6
   }
-
-  console.log(dimensions.width)
 
   const margins = {
     top: dimensions.height * 6,
@@ -135,33 +139,37 @@ const MapChart = ({ height, width, currentStop, action, people, genderStack, rac
   )
 
   return (
-    <svg height={height} width={width} ref={innerRef}>
-      <g transform={`translate(${margins.left * 0.25},${margins.top})`} ref={circlesRef}>
-        <rect
-          width={dimensions.width + dimensions.paddingSides * 4}
-          height={dimensions.height}
-          rx={20}
-          ry={20}
-          fill="#a8a9ac"
-        />
-        {stopCircs}
-      </g>
-      <g
-        transform={`translate(${width / 1.125} ${margins.top / 1.1})`}
-        style={{ cursor: 'pointer' }}
-        // onClick={step > 2 ? stepper(2) : stepper(step)}
-        onClick={() => {
-          stepper(step)
-        }}
-      >
-        {!isMoving ? <ArrowText step={step} /> : ''}
-        <ArrowPath
-          isGlowing={isMoving}
-          transform={`scale(1.25 1.25)`}
-        />
-      </g>
-
-    </svg>
+    <>
+      <svg height={height} width={width}>
+      <foreignObject x="100" y="100" width="100" height="50">
+        <button>Hello</button>
+      </foreignObject>
+        <g transform={`translate(${margins.left * 0.25},${margins.top})`} ref={circlesRef}>
+          <rect
+            width={dimensions.width + dimensions.paddingSides * 4}
+            height={dimensions.height}
+            rx={20}
+            ry={20}
+            fill="#a8a9ac"
+          />
+          {stopCircs}
+        </g>
+        <g
+          transform={`translate(${width / 1.125} ${margins.top / 1.1})`}
+          style={{ cursor: 'pointer' }}
+          // onClick={step > 2 ? stepper(2) : stepper(step)}
+          onClick={() => {
+            stepper(step)
+          }}
+        >
+          {!isMoving ? <ArrowText step={step} /> : ''}
+          <ArrowPath
+            isGlowing={isMoving}
+            transform={`scale(1.25 1.25)`}
+          />
+        </g>
+      </svg>
+    </>
   )
 }
 

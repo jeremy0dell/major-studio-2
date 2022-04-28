@@ -14,6 +14,10 @@ export const egress = 'egress'
 export const moveSeats = 'moveSeats'
 export const board = 'board'
 
+// map chart types
+export const race = 'race'
+export const income = 'income'
+
 // MapChart
 export const raceKeys = [
   'Hispanic or Latino',
@@ -35,4 +39,17 @@ export const emptyRaces = {
   'Native Hawaiian and Other Pacific Islander alone': 0,
   'Some Other Race alone': 0,
   'Population of two or more races:': 0
+}
+
+export const emptyIncomes = {
+  'Less than $10,000':  0,
+  '$10,000 to $14,999':  0,
+  '$15,000 to $24,999':  0,
+  '$25,000 to $34,999':  0,
+  '$35,000 to $49,999':  0,
+  '$50,000 to $74,999':  0,
+  '$75,000 to $99,999':  0,
+  '$100,000 to $149,999':  0,
+  '$150,000 to $199,999':  0,
+  '$200,000 or more':  0
 }
