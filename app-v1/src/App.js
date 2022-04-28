@@ -26,7 +26,6 @@ import './App.css';
 function App() {
   // sizing
   const windowSize = useWindowSize()
-  const trainRef = useRef(null)
   // train state
   const [gridTrain, setGridTrain] = useState(createGridTrain(C.height, C.width, C.seatIdxs, C.doorIdxs))
   const [peopleBoarded, setPeopleBoarded] = useState([])
@@ -232,6 +231,7 @@ function App() {
           people={peopleBoarded}
           genderStack={genderStack}
           raceStack={raceStack}
+          incomeStack={incomeStack}
           stepHandlers={stepHandlers}
           isMoving={isMoving}
           currentMapChart={currentMapChart}
@@ -240,10 +240,10 @@ function App() {
       </div>
       <div id="train" style={{ height: '0vh' }}>
         {windowSize.height && <TrainChart
-          innerRef={trainRef}
           height={'100%'}
           width={windowSize.width}
           people={peopleBoarded}
+          currentMapChart={currentMapChart}
         />}
       </div>
     </div>

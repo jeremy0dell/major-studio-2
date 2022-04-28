@@ -42,3 +42,11 @@ export const sampleFromProportions = propObj => {
     entries.map(entry => entry[1] * 100)
   )
 }
+
+// Bind arguments starting after however many are passed in.
+// https://stackoverflow.com/a/27699684
+export function bind_trailing_args(fn, ...bound_args) {
+  return function(...args) {
+      return fn(...args, ...bound_args);
+  };
+}

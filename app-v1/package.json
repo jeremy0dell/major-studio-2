@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.6.3",
+    "@mui/styled-engine-sc": "^5.6.1",
     "d3": "^7.4.4",
     "lodash": "^4.17.21",
     "react": "^17.0.2",
@@ -10,6 +14,7 @@
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.7",
     "react-scrollama": "^2.3.0",
+    "styled-components": "^5.3.5",
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.4"
   },

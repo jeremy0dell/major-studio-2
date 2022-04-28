@@ -1,11 +1,13 @@
 import { useEffect, useRef } from "react"
 import * as d3 from 'd3'
 
-import { enterFn, updateFn, exitFn } from "../logic/data"
+import { enterFn, updateFn, exitFn, colors, transitionColors } from "../logic/data"
 import * as C from '../logic/constants'
 import train from '../assets/images/grid.svg'
+import { transition } from "d3"
+import { bind_trailing_args } from "../logic/helpers"
 
-const TrainChart = ({ height, width, people, innerRef }) => {
+const TrainChart = ({ height, width, people, currentMapChart }) => {
   const peopleRef = useRef(null)
 
   useEffect(() => {
@@ -15,12 +17,24 @@ const TrainChart = ({ height, width, people, innerRef }) => {
         .data(people, d => d.id)
 
       peopleSelection.join(
-        enterFn,
+        bind_trailing_args(enterFn, currentMapChart),
         updateFn,
         exitFn
       )
     }
   }, [people])
+
+  useEffect(() => {
+    if (peopleRef.current) {
+      const peopleSelection = d3.select(peopleRef.current)
+        .selectAll('circle')
+        .data(people, d => d.id)
+
+        transitionColors(peopleSelection, currentMapChart)
+
+      console.log('hello selection:', peopleSelection)
+    }
+  }, [currentMapChart])
 
   const margin = {
     top: 100,
@@ -28,7 +42,7 @@ const TrainChart = ({ height, width, people, innerRef }) => {
   }
 
   return (
-    <svg height={height} width={width} ref={innerRef}>
+    <svg height={height} width={width}>
       <image
         href={train}
         // height={200}

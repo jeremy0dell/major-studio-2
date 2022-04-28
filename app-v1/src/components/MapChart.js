@@ -1,8 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react'
+
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+
 import * as d3 from 'd3'
 import * as C from '../logic/constants'
 
-import { stops, raceColors } from '../logic/data'
+import { stops, raceColors, chartSeries, chartTypeInfo } from '../logic/data'
 
 
 const stripMapColor = (curr, i) => {
@@ -13,6 +20,13 @@ const stripMapColor = (curr, i) => {
   } else {
     return "#231f20"
   }
+}
+
+const whiteStyle = {
+  color: 'white',
+  '&.Mui-checked': {
+    color: 'white',
+  },
 }
 
 const ArrowPath = ({ transform, isGlowing }) =>
@@ -45,21 +59,25 @@ const MapChart = ({
   action,
   people,
   raceStack,
+  incomeStack,
   stepHandlers,
   isMoving,
   currentMapChart,
   setCurrentMapChart
 }) => {
   const [step, setStep] = useState(0)
+  const [value, setValue] = useState(currentMapChart);
+
   // const [isGlowing, setIsGlowing] = useState(true)
   const circlesRef = useRef(null)
 
   useEffect(() => {
     if (action === C.board) {
-      const stacked = d3.stack()
-        .keys(C.raceKeys)
+      // const stacked = d3.stack()
+      //   .keys(C.raceKeys)
 
-      const series = stacked(raceStack)
+      // const series = stacked(raceStack)
+      const series = chartSeries(chartTypeInfo[currentMapChart].keys, stacks[currentMapChart])
       // console.log('hello', d3.max(series, layer => d3.max(layer, sequence => sequence[1])))
       var y = d3.scaleLinear()
         .domain([0, 180])
@@ -71,8 +89,23 @@ const MapChart = ({
         const selection = d3.select(circlesRef.current)
           .selectAll('g')
           .data(series)
-          .join('g')
-          .attr('fill', (d, i) => raceColors(d.key))
+          .join(
+            enter => enter.append('g')
+              .attr('opacity', 1)
+              .transition()
+              .duration(1000)
+              .attr('fill', (d, i) => chartTypeInfo[currentMapChart].colors(d.key)),
+            update => update
+              .transition()
+              .duration(1000)
+              .attr('fill', (d, i) => chartTypeInfo[currentMapChart].colors(d.key)),
+            exit => exit
+              .transition()
+              .duration(1000)
+              .attr('opacity', 0)
+              .remove()
+          )
+          // .attr('fill', (d, i) => chartTypeInfo[currentMapChart].colors(d.key))
           .selectAll('rect').data(d => d)
           .join(
             enter => enter.append('rect')
@@ -86,20 +119,83 @@ const MapChart = ({
               .delay(2000)
               .attr('height', d => y(d[0]) - y(d[1]))
               .attr('y', (d, i) => y(d[1]) - dimensions.barHeight),
-
-            update => update,
+            update => update
+              .transition()
+              .duration(1000)
+              // .delay(2000)
+              .attr('height', d => y(d[0]) - y(d[1]))
+              .attr('y', (d, i) => y(d[1]) - dimensions.barHeight),
             exit => exit
               .transition()
               .duration(1000)
-              .delay(2000)
+              // .delay(2000)
               .attr('height', 0)
               .attr('y', 0)
               .remove()
-
           )
       }
     }
   }, [people])
+
+  useEffect(() => {
+    const series = chartSeries(chartTypeInfo[currentMapChart].keys, stacks[currentMapChart])
+    // console.log('hello', d3.max(series, layer => d3.max(layer, sequence => sequence[1])))
+    var y = d3.scaleLinear()
+      .domain([0, 180])
+      .range([dimensions.barHeight, 0]);
+
+    if (circlesRef.current) {
+      const selection = d3.select(circlesRef.current)
+        .selectAll('g')
+        .data(series)
+        .join(
+          enter => enter.append('g')
+            .attr('opacity', 1)
+            .transition()
+            .duration(1000)
+            .attr('fill', (d, i) => chartTypeInfo[currentMapChart].colors(d.key)),
+          update => update
+            .transition()
+            .duration(1000)
+            .attr('fill', (d, i) => chartTypeInfo[currentMapChart].colors(d.key)),
+          exit => exit
+            .transition()
+            .duration(1000)
+            .attr('opacity', 0)
+            .remove()
+        )
+
+      selection
+        .selectAll('rect').data(d => d)
+        .join(
+          enter => enter.append('rect')
+            .attr('x', (d, i, a) => (dimensions.width / stops.length) * (i + 1) - 40 + dimensions.paddingSides * 1.5)
+            .attr('width', 30)
+            .attr('height', 0)
+            .attr('y', 0)
+            // transition stuff
+            .transition()
+            .duration(1000)
+            // .delay(2000)
+            .attr('height', d => y(d[0]) - y(d[1]))
+            .attr('y', (d, i) => y(d[1]) - dimensions.barHeight),
+
+          update => update
+            .transition()
+            .duration(1000)
+            // .delay(2000)
+            .attr('height', d => y(d[0]) - y(d[1]))
+            .attr('y', (d, i) => y(d[1]) - dimensions.barHeight),
+          exit => exit
+            .transition()
+            .duration(1000)
+            // .delay(2000)
+            .attr('height', 0)
+            .attr('y', 0)
+            .remove()
+        )
+    }
+  }, [currentMapChart])
   const dimensions = {
     height: 40,
     width: width * 0.8,
@@ -110,6 +206,11 @@ const MapChart = ({
   const margins = {
     top: dimensions.height * 6,
     left: width * 0.1
+  }
+
+  const stacks = {
+    [C.race]: raceStack,
+    [C.income]: incomeStack
   }
 
   const stepper = (i) => {
@@ -134,15 +235,22 @@ const MapChart = ({
         {stop[0]}
       </text>
     </React.Fragment>
-
-
   )
 
+  const handleChange = (event) => {
+    setValue(event.target.value)
+    setCurrentMapChart(event.target.value)
+  }
   return (
     <>
       <svg height={height} width={width}>
-      <foreignObject x="100" y="100" width="100" height="50">
-        <button>Hello</button>
+      <foreignObject x={width - 200} y="50" width="700" height="200">
+        <FormControl sx={{ marginLeft: '20px' }}>
+          <RadioGroup value={value} onChange={handleChange}>
+            <FormControlLabel value={C.race} control={<Radio sx={whiteStyle} />} label="Race" />
+            <FormControlLabel value={C.income} control={<Radio sx={whiteStyle} />} label="Income" />
+          </RadioGroup>
+        </FormControl>
       </foreignObject>
         <g transform={`translate(${margins.left * 0.25},${margins.top})`} ref={circlesRef}>
           <rect
@@ -159,6 +267,8 @@ const MapChart = ({
           style={{ cursor: 'pointer' }}
           // onClick={step > 2 ? stepper(2) : stepper(step)}
           onClick={() => {
+            if (isMoving) return
+            
             stepper(step)
           }}
         >
