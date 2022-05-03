@@ -103,7 +103,10 @@ const MapChart = ({
             const selection = enter
               .append('g')
                 .attr('class', 'legend-marker')
+<<<<<<< HEAD
                 .attr('transform', `translate()`)
+=======
+>>>>>>> 2d5829b91f66ba7bc303ea2b832af397332b427f
               
             selection
               .append('rect')
