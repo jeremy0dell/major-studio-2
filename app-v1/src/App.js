@@ -154,6 +154,16 @@ function App() {
     }, 2000)
   }
 
+  const noMoveMiddleSteps = () => {
+    setIsMoving(true)
+    setAction(C.egress)
+    setTimeout(() => setAction(C.board), 2850)
+    setTimeout(() => {
+      setCurrentStop(currentStop + 1)
+      setIsMoving(false)
+    }, 5100)
+  }
+
   const moveMiddleSteps = () => {
     setIsMoving(true)
     setAction(C.egress)
@@ -165,11 +175,12 @@ function App() {
     }, 6500)
   }
 
-  const stepHandlers = [
+  const stepHandlers = {
     introduceTrain,
     moveFirstStep,
-    moveMiddleSteps
-  ]
+    moveMiddleSteps,
+    noMoveMiddleSteps
+  }
 
   // scrolly
   const onStepEnter = ({ data }) => {
