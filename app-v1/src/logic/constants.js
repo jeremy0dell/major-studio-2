@@ -19,6 +19,7 @@ export const race = 'race'
 export const income = 'income'
 
 // MapChart
+// too verbose
 export const raceKeys = [
   'Hispanic or Latino',
   'White alone',
@@ -29,6 +30,16 @@ export const raceKeys = [
   'Some Other Race alone',
   'Population of two or more races:',
 ]
+export const shortRaceKeys = {
+  'Hispanic or Latino': 'Hispanic',
+  'White alone': 'White',
+  'Black or African American alone': 'Black',
+  'American Indian and Alaska Native alone': 'American Indian',
+  'Asian alone': 'Asian',
+  'Native Hawaiian and Other Pacific Islander alone': 'Pacific Islander',
+  'Some Other Race alone':  'Other Race',
+  'Population of two or more races:': '2+ Races',
+}
 
 export const emptyRaces = {
   'Hispanic or Latino': 0,

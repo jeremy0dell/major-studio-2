@@ -1,6 +1,6 @@
 import * as d3 from 'd3'
 import * as C from './constants'
-import { randomIntFromInterval, getClosestEl } from './helpers'
+import { randomIntFromInterval, getClosestEl, introduceNoise } from './helpers'
 
 // racial data
 const racial = [
@@ -554,7 +554,7 @@ const rent = [
 // stops
 // [0] is name, [1] is fullness, [2] is egress, [3] is racial data, [4] is income data
 export const stops = [
-  ["Canarsie-Rockaway Pkwy", 0.214797136, 0.5],
+  ["Rockaway Pkwy", 0.214797136, 0.5],
   // ["CANARSIE-ROCKAW",	0.814797136, 0.5], // for testing eats
   ["E 105 St", 0.1873508353, 0.3],
   // ["EAST 105 ST",	0.8873508353, 0.5], // for testing egress and stuff
@@ -563,7 +563,7 @@ export const stops = [
   ["Sutter Av", 0.3233890215, 0.3],
   ["Atlantic Av", 0.3257756563, 0.3],
   ["Broadway Junction", 0.3579952267, 0.3],
-  ["Bushwick Av-Aberdeen St", 0.3758949881, 0.3],
+  ["Bushwick Av", 0.3758949881, 0.3],
   ["Wilson Av", 0.4164677804, 0.3],
   ["Halsey St", 0.4427207637, 0.3],
   ["Myrtle-Wyckoff Avs", 0.353699284, 0.3],
@@ -599,8 +599,8 @@ export const stops = [
 export const enterFn = (enter, chartType) => enter
   .append('circle')
     // .attr('cx', () => getRandEl(C.doorIdxs) * C.squareSize)
-    .attr('cx', d => getClosestEl(d.x, C.doorIdxs) * C.squareSize)
-    .attr('cy', C.height * C.squareSize + C.squareSize)
+    .attr('cx', d => introduceNoise(getClosestEl(d.x, C.doorIdxs) * C.squareSize) + (C.squareSize / 2))
+    .attr('cy', introduceNoise(C.height * C.squareSize + C.squareSize))
     .attr('r', C.squareSize / 3)
     .attr('fill', d => chartTypeInfo[chartType].colors(d[chartType]))
     .attr('opacity', 0)
@@ -608,14 +608,14 @@ export const enterFn = (enter, chartType) => enter
   .duration(250)
     .attr('opacity', 1)
   .transition()
-  .duration(() => randomIntFromInterval(600, 800))
-  .delay(() => Math.random() * 400)
-    .attr('cy', (C.height * C.squareSize) / 2)
+  .duration(() => randomIntFromInterval(300, 900))
+  .delay(() => Math.random() * 1000)
+    .attr('cy', introduceNoise((C.height * C.squareSize) / 2))
   .transition()
-  .duration(() => randomIntFromInterval(600, 800))
-  .delay(() => Math.random() * 550)
-    .attr('cx', d => (d.x * C.squareSize) + C.squareSize / 2)
-    .attr('cy', d => (d.y * C.squareSize) + C.squareSize / 2)
+  .duration(() => randomIntFromInterval(300, 900))
+  .delay(() => Math.random() * 100)
+    .attr('cx', d => introduceNoise((d.x * C.squareSize) + C.squareSize / 2))
+    .attr('cy', d => introduceNoise((d.y * C.squareSize) + C.squareSize / 2))
 
 // exit
 export const exitFn = exit => exit
@@ -623,12 +623,12 @@ export const exitFn = exit => exit
   .transition()
   .duration(600)
   .delay(() => Math.random() * 650)
-    .attr('cx', d => getClosestEl(d.x, C.doorIdxs) * C.squareSize)
-    .attr('cy', (C.height * C.squareSize) / 2)
+    .attr('cx', d => introduceNoise(getClosestEl(d.x, C.doorIdxs) * C.squareSize))
+    .attr('cy', introduceNoise((C.height * C.squareSize) / 2))
   .transition()
   .duration(600)
   .delay(() => Math.random() * 650)
-    .attr('cy', C.height * C.squareSize + C.squareSize)
+    .attr('cy', introduceNoise(C.height * C.squareSize + C.squareSize))
   .transition()
   .duration(500)
     .attr('opacity', 0)
@@ -640,8 +640,8 @@ export const updateFn = update => update
   .transition()
   .duration(() => randomIntFromInterval(600, 800))
   .delay(() => Math.random() * 400)
-    .attr('cx', d => (d.x * C.squareSize) + C.squareSize / 2)
-    .attr('cy', d => (d.y * C.squareSize) + C.squareSize / 2)
+    .attr('cx', d => introduceNoise((d.x * C.squareSize) + C.squareSize / 2))
+    .attr('cy', d => introduceNoise((d.y * C.squareSize) + C.squareSize / 2))
 
   
 

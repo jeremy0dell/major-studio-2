@@ -71,26 +71,89 @@ const MapChart = ({
   // const [isGlowing, setIsGlowing] = useState(true)
   const circlesRef = useRef(null)
 
+  // add axis
   useEffect(() => {
+    const series = chartSeries(chartTypeInfo[currentMapChart].keys, stacks[currentMapChart])
+    // console.log('hello', d3.max(series, layer => d3.max(layer, sequence => sequence[1])))
+    var y = d3.scaleLinear()
+      .domain([0, C.maxOccupancy])
+      .range([dimensions.barHeight, 0]);
+
+    var axis = d3.axisLeft(y)
+
+
+    console.log('testing', axis)
+
+    if (circlesRef.current) {
+      // add axis
+      d3.select(circlesRef.current)
+        .append('g')
+        .attr('class', 'axis')
+        .attr('transform', `translate(0, -${dimensions.barHeight})`)
+        .call(axis)
+
+      // add legend
+      d3.select(circlesRef.current)
+        .append('g')
+        .attr('class', 'legend')
+        .selectAll('g')
+        .data(chartTypeInfo[currentMapChart].keys)
+        .join(
+          enter => {
+            const selection = enter
+              .append('g')
+                .attr('class', 'legend-marker')
+              
+            selection
+              .append('rect')
+                .attr('width', 15)
+                .attr('height', 15)
+                .attr('x', (_, i) => (i + 1) * 150)
+                .attr('y', dimensions.barHeight * -1 - 50)
+                .attr('fill', d => chartTypeInfo[currentMapChart].colors(d))
+
+            selection
+              .append('text')
+                .attr('x', (_, i) => (i + 1) * 150 + 20)
+                .attr('y', dimensions.barHeight * -1 - 35)
+                .attr('fill', 'white')
+                // .attr('transform', (d, i) => `translate(${(i + 1) * 150},${dimensions.barHeight * -1 - 20}) rotate(20)`)
+                // .attr('transform', (d, i) => `translate(${(i + 1) * 150},${dimensions.barHeight * -1 - 50}) rotate(45)`)
+                .text(d => C.shortRaceKeys[d])
+
+            return selection
+          }
+        )
+    }
+
+  }, [])
+
+  useEffect(() => {
+
+    var axis = d3.axisLeft(y)
+
     if (action === C.board) {
+      console.log(currentMapChart)
+      const series = chartSeries(chartTypeInfo[currentMapChart].keys, stacks[currentMapChart])
+      // console.log('hello', d3.max(series, layer => d3.max(layer, sequence => sequence[1])))
+      var y = d3.scaleLinear()
+        .domain([0, C.maxOccupancy])
+        .range([dimensions.barHeight, 0]);
+  
       // const stacked = d3.stack()
       //   .keys(C.raceKeys)
 
       // const series = stacked(raceStack)
-      const series = chartSeries(chartTypeInfo[currentMapChart].keys, stacks[currentMapChart])
-      // console.log('hello', d3.max(series, layer => d3.max(layer, sequence => sequence[1])))
-      var y = d3.scaleLinear()
-        .domain([0, 180])
-        .range([dimensions.barHeight, 0]);
 
       if (circlesRef.current) {
 
         // eslint-disable-next-line
         const selection = d3.select(circlesRef.current)
-          .selectAll('g')
+          .selectAll('g.bar')
           .data(series)
           .join(
             enter => enter.append('g')
+              .attr('class', 'bar')
               .attr('opacity', 1)
               .transition()
               .duration(1000)
@@ -105,10 +168,10 @@ const MapChart = ({
               .attr('opacity', 0)
               .remove()
           )
-          // .attr('fill', (d, i) => chartTypeInfo[currentMapChart].colors(d.key))
-          .selectAll('rect').data(d => d)
+          .selectAll('rect.bar-rect').data(d => d)
           .join(
             enter => enter.append('rect')
+              .attr('class', 'bar-rect')
               .attr('x', (d, i, a) => (dimensions.width / stops.length) * (i + 1) - 40 + dimensions.paddingSides * 1.5)
               .attr('width', 30)
               .attr('height', 0)
@@ -116,8 +179,8 @@ const MapChart = ({
               // transition stuff
               .transition()
               .duration(1000)
-              .delay(2000)
-              .attr('height', d => y(d[0]) - y(d[1]))
+              .delay(2200)
+              .attr('height', d =>{ console.log(d, y); return y(d[0]) - y(d[1])})
               .attr('y', (d, i) => y(d[1]) - dimensions.barHeight),
             update => update
               .transition()
@@ -146,14 +209,16 @@ const MapChart = ({
 
     if (circlesRef.current) {
       const selection = d3.select(circlesRef.current)
-        .selectAll('g')
+        .selectAll('g.bar')
         .data(series)
         .join(
           enter => enter.append('g')
-            .attr('opacity', 1)
+            .attr('class', 'bar')
+            .attr('opacity', 0)
             .transition()
             .duration(1000)
-            .attr('fill', (d, i) => chartTypeInfo[currentMapChart].colors(d.key)),
+            .attr('fill', (d, i) => chartTypeInfo[currentMapChart].colors(d.key))
+            .attr('opacity', 1),
           update => update
             .transition()
             .duration(1000)
@@ -166,9 +231,10 @@ const MapChart = ({
         )
 
       selection
-        .selectAll('rect').data(d => d)
+        .selectAll('rect.bar-rect').data(d => d)
         .join(
           enter => enter.append('rect')
+            .attr('class', 'bar-rect')
             .attr('x', (d, i, a) => (dimensions.width / stops.length) * (i + 1) - 40 + dimensions.paddingSides * 1.5)
             .attr('width', 30)
             .attr('height', 0)
@@ -204,7 +270,7 @@ const MapChart = ({
   }
 
   const margins = {
-    top: dimensions.height * 6,
+    top: dimensions.height * 8,
     left: width * 0.1
   }
 
@@ -214,7 +280,16 @@ const MapChart = ({
   }
 
   const stepper = (i) => {
-    stepHandlers[step > 2 ? 2 : step]()
+    console.log(stepHandlers)
+    if (step === 0) {
+      stepHandlers['introduceTrain']()
+    } else if (step === 1) {
+      stepHandlers['moveFirstStep']()
+    } else if (step > 1 && step < 5) {
+      stepHandlers['noMoveMiddleSteps']()
+    } else {
+      stepHandlers['moveMiddleSteps']()
+    }
     setStep(step + 1)
   }
 
@@ -268,7 +343,7 @@ const MapChart = ({
           // onClick={step > 2 ? stepper(2) : stepper(step)}
           onClick={() => {
             if (isMoving) return
-            
+
             stepper(step)
           }}
         >
