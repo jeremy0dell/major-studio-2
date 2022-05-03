@@ -103,6 +103,7 @@ const MapChart = ({
             const selection = enter
               .append('g')
                 .attr('class', 'legend-marker')
+                .attr('transform', `translate()`)
               
             selection
               .append('rect')
@@ -260,6 +261,24 @@ const MapChart = ({
             .attr('y', 0)
             .remove()
         )
+
+      // update legend
+      d3.select(circlesRef.current)
+        .selectAll('g.legend-marker')
+        .data(chartTypeInfo[currentMapChart].keys)
+        .join(
+          enter => enter,
+          update => {
+          d3.select(circlesRef.current)
+            .append('g')
+            .attr('class', 'legend')
+            .selectAll('g')
+            .data(chartTypeInfo[currentMapChart].keys)
+            .join()
+
+          }
+        )
+    
     }
   }, [currentMapChart])
   const dimensions = {
