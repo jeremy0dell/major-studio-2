@@ -1,0 +1,242 @@
+[
+    {
+        "STATION": "8 AV",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 262,
+        "last_month_crowd": 227,
+        "last_year_crowd": 703
+    }, 
+    {
+        "STATION": "6 AV",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 295,
+        "last_month_crowd": 255,
+        "last_year_crowd": 765
+    },
+    {
+        "STATION": "14 ST-UNION SQ",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 315,
+        "last_month_crowd": 268,
+        "last_year_crowd": 838
+    },
+    {
+        "STATION": "3 AV",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 307,
+        "last_month_crowd": 263,
+        "last_year_crowd": 811
+    },
+    {
+        "STATION": "1 AV",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 311,
+        "last_month_crowd": 266,
+        "last_year_crowd": 813
+    },
+    {
+        "STATION": "BEDFORD AV",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 312,
+        "last_month_crowd": 266,
+        "last_year_crowd": 812
+    },
+    {
+        "STATION": "LORIMER ST",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 292,
+        "last_month_crowd": 251,
+        "last_year_crowd": 716
+    },
+    {
+        "STATION": "GRAHAM AV",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 285,
+        "last_month_crowd": 245,
+        "last_year_crowd": 691
+    },
+    {
+        "STATION": "GRAND ST",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 283,
+        "last_month_crowd": 242,
+        "last_year_crowd": 692
+    },
+    {
+        "STATION": "MONTROSE AV",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 271,
+        "last_month_crowd": 233,
+        "last_year_crowd": 657
+    },
+    {
+        "STATION": "MORGAN AV",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 255,
+        "last_month_crowd": 220,
+        "last_year_crowd": 609
+    },
+    {
+        "STATION": "JEFFERSON ST",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 249,
+        "last_month_crowd": 214,
+        "last_year_crowd": 586
+    },
+    {
+        "STATION": "DEKALB AV",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 231,
+        "last_month_crowd": 201,
+        "last_year_crowd": 538
+    },
+    {
+        "STATION": "MYRTLE-WYCKOFF",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 201,
+        "last_month_crowd": 175,
+        "last_year_crowd": 464
+    },
+    {
+        "STATION": "HALSEY ST",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 158,
+        "last_month_crowd": 136,
+        "last_year_crowd": 371
+    },
+    {
+        "STATION": "WILSON AV",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 146,
+        "last_month_crowd": 125,
+        "last_year_crowd": 349
+    },
+    {
+        "STATION": "BUSHWICK AV",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 129,
+        "last_month_crowd": 110,
+        "last_year_crowd": 315
+    },
+    {
+        "STATION": "BROADWAY JCT",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 121,
+        "last_month_crowd": 103,
+        "last_year_crowd": 300
+    },
+    {
+        "STATION": "ATLANTIC AV",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 110,
+        "last_month_crowd": 93,
+        "last_year_crowd": 273
+    },
+    {
+        "STATION": "SUTTER AV",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 106,
+        "last_month_crowd": 90,
+        "last_year_crowd": 271
+    },
+    {
+        "STATION": "LIVONIA AV",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 92,
+        "last_month_crowd": 77,
+        "last_year_crowd": 239
+    },
+    {
+        "STATION": "NEW LOTS",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 73,
+        "last_month_crowd": 62,
+        "last_year_crowd": 202
+    },
+    {
+        "STATION": "EAST 105 ST",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 49,
+        "last_month_crowd": 41,
+        "last_year_crowd": 157
+    },
+    {
+        "STATION": "CANARSIE-ROCKAW",
+        "route_id": "L",
+        "hour": 8,
+        "direction_id": 0,
+        "weekday": 1,
+        "current_crowd": 44,
+        "last_month_crowd": 39,
+        "last_year_crowd": 180
+    }
+]

@@ -1,0 +1,11 @@
+#app {
+    width: calc(30 * 30px);
+    height: calc(6 * 30px);
+
+    /* grid stuff */
+    display: grid;
+    grid-template: repeat(6, 30px) / repeat(30, 30px);
+
+    /* visual stuff */
+    border: 1px solid black;
+}

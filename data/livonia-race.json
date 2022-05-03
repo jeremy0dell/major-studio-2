@@ -1,0 +1,659 @@
+[
+  {
+    "Label (Grouping)": "Total:",
+    "Census Tract 910, Kings County, New York": "5,814",
+    "Census Tract 918, Kings County, New York": "2,703",
+    "Census Tract 1126, Kings County, New York": "4,368",
+    "Census Tract 1130, Kings County, New York": "4,460",
+    "Census Tract 1132, Kings County, New York": "2,427",
+    "Census Tract 1134, Kings County, New York": "2,658"
+  },
+  {
+    "Label (Grouping)": "Hispanic or Latino",
+    "Census Tract 910, Kings County, New York": "1,914",
+    "Census Tract 918, Kings County, New York": "1,116",
+    "Census Tract 1126, Kings County, New York": "1,105",
+    "Census Tract 1130, Kings County, New York": 952,
+    "Census Tract 1132, Kings County, New York": 455,
+    "Census Tract 1134, Kings County, New York": 912
+  },
+  {
+    "Label (Grouping)": "Not Hispanic or Latino:",
+    "Census Tract 910, Kings County, New York": "3,900",
+    "Census Tract 918, Kings County, New York": "1,587",
+    "Census Tract 1126, Kings County, New York": "3,263",
+    "Census Tract 1130, Kings County, New York": "3,508",
+    "Census Tract 1132, Kings County, New York": "1,972",
+    "Census Tract 1134, Kings County, New York": "1,746"
+  },
+  {
+    "Label (Grouping)": "Population of one race:",
+    "Census Tract 910, Kings County, New York": "3,735",
+    "Census Tract 918, Kings County, New York": "1,490",
+    "Census Tract 1126, Kings County, New York": "3,065",
+    "Census Tract 1130, Kings County, New York": "3,223",
+    "Census Tract 1132, Kings County, New York": "1,832",
+    "Census Tract 1134, Kings County, New York": "1,672"
+  },
+  {
+    "Label (Grouping)": "White alone",
+    "Census Tract 910, Kings County, New York": 69,
+    "Census Tract 918, Kings County, New York": 29,
+    "Census Tract 1126, Kings County, New York": 56,
+    "Census Tract 1130, Kings County, New York": 79,
+    "Census Tract 1132, Kings County, New York": 28,
+    "Census Tract 1134, Kings County, New York": 59
+  },
+  {
+    "Label (Grouping)": "Black or African American alone",
+    "Census Tract 910, Kings County, New York": "3,516",
+    "Census Tract 918, Kings County, New York": "1,421",
+    "Census Tract 1126, Kings County, New York": "2,945",
+    "Census Tract 1130, Kings County, New York": "3,075",
+    "Census Tract 1132, Kings County, New York": "1,734",
+    "Census Tract 1134, Kings County, New York": "1,565"
+  },
+  {
+    "Label (Grouping)": "American Indian and Alaska Native alone",
+    "Census Tract 910, Kings County, New York": 16,
+    "Census Tract 918, Kings County, New York": 4,
+    "Census Tract 1126, Kings County, New York": 10,
+    "Census Tract 1130, Kings County, New York": 11,
+    "Census Tract 1132, Kings County, New York": 6,
+    "Census Tract 1134, Kings County, New York": 13
+  },
+  {
+    "Label (Grouping)": "Asian alone",
+    "Census Tract 910, Kings County, New York": 100,
+    "Census Tract 918, Kings County, New York": 15,
+    "Census Tract 1126, Kings County, New York": 15,
+    "Census Tract 1130, Kings County, New York": 32,
+    "Census Tract 1132, Kings County, New York": 38,
+    "Census Tract 1134, Kings County, New York": 12
+  },
+  {
+    "Label (Grouping)": "Native Hawaiian and Other Pacific Islander alone",
+    "Census Tract 910, Kings County, New York": 1,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 4,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Some Other Race alone",
+    "Census Tract 910, Kings County, New York": 33,
+    "Census Tract 918, Kings County, New York": 21,
+    "Census Tract 1126, Kings County, New York": 39,
+    "Census Tract 1130, Kings County, New York": 26,
+    "Census Tract 1132, Kings County, New York": 22,
+    "Census Tract 1134, Kings County, New York": 23
+  },
+  {
+    "Label (Grouping)": "Population of two or more races:",
+    "Census Tract 910, Kings County, New York": 165,
+    "Census Tract 918, Kings County, New York": 97,
+    "Census Tract 1126, Kings County, New York": 198,
+    "Census Tract 1130, Kings County, New York": 285,
+    "Census Tract 1132, Kings County, New York": 140,
+    "Census Tract 1134, Kings County, New York": 74
+  },
+  {
+    "Label (Grouping)": "Population of two races:",
+    "Census Tract 910, Kings County, New York": 155,
+    "Census Tract 918, Kings County, New York": 90,
+    "Census Tract 1126, Kings County, New York": 187,
+    "Census Tract 1130, Kings County, New York": 279,
+    "Census Tract 1132, Kings County, New York": 137,
+    "Census Tract 1134, Kings County, New York": 74
+  },
+  {
+    "Label (Grouping)": "White; Black or African American",
+    "Census Tract 910, Kings County, New York": 53,
+    "Census Tract 918, Kings County, New York": 13,
+    "Census Tract 1126, Kings County, New York": 19,
+    "Census Tract 1130, Kings County, New York": 34,
+    "Census Tract 1132, Kings County, New York": 22,
+    "Census Tract 1134, Kings County, New York": 13
+  },
+  {
+    "Label (Grouping)": "White; American Indian and Alaska Native",
+    "Census Tract 910, Kings County, New York": 1,
+    "Census Tract 918, Kings County, New York": 1,
+    "Census Tract 1126, Kings County, New York": 1,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 5
+  },
+  {
+    "Label (Grouping)": "White; Asian",
+    "Census Tract 910, Kings County, New York": 2,
+    "Census Tract 918, Kings County, New York": 4,
+    "Census Tract 1126, Kings County, New York": 4,
+    "Census Tract 1130, Kings County, New York": 6,
+    "Census Tract 1132, Kings County, New York": 1,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Some Other Race",
+    "Census Tract 910, Kings County, New York": 3,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 5,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 4
+  },
+  {
+    "Label (Grouping)": "Black or African American; American Indian and Alaska Native",
+    "Census Tract 910, Kings County, New York": 23,
+    "Census Tract 918, Kings County, New York": 9,
+    "Census Tract 1126, Kings County, New York": 8,
+    "Census Tract 1130, Kings County, New York": 19,
+    "Census Tract 1132, Kings County, New York": 21,
+    "Census Tract 1134, Kings County, New York": 6
+  },
+  {
+    "Label (Grouping)": "Black or African American; Asian",
+    "Census Tract 910, Kings County, New York": 5,
+    "Census Tract 918, Kings County, New York": 7,
+    "Census Tract 1126, Kings County, New York": 7,
+    "Census Tract 1130, Kings County, New York": 1,
+    "Census Tract 1132, Kings County, New York": 6,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 910, Kings County, New York": 1,
+    "Census Tract 918, Kings County, New York": 4,
+    "Census Tract 1126, Kings County, New York": 3,
+    "Census Tract 1130, Kings County, New York": 3,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; Some Other Race",
+    "Census Tract 910, Kings County, New York": 66,
+    "Census Tract 918, Kings County, New York": 48,
+    "Census Tract 1126, Kings County, New York": 145,
+    "Census Tract 1130, Kings County, New York": 210,
+    "Census Tract 1132, Kings County, New York": 84,
+    "Census Tract 1134, Kings County, New York": 34
+  },
+  {
+    "Label (Grouping)": "American Indian and Alaska Native; Asian",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 1,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "American Indian and Alaska Native; Some Other Race",
+    "Census Tract 910, Kings County, New York": 1,
+    "Census Tract 918, Kings County, New York": 3,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 1,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Asian; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 10
+  },
+  {
+    "Label (Grouping)": "Asian; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 1,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 2,
+    "Census Tract 1134, Kings County, New York": 2
+  },
+  {
+    "Label (Grouping)": "Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Population of three races:",
+    "Census Tract 910, Kings County, New York": 9,
+    "Census Tract 918, Kings County, New York": 6,
+    "Census Tract 1126, Kings County, New York": 10,
+    "Census Tract 1130, Kings County, New York": 6,
+    "Census Tract 1132, Kings County, New York": 3,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; American Indian and Alaska Native",
+    "Census Tract 910, Kings County, New York": 4,
+    "Census Tract 918, Kings County, New York": 2,
+    "Census Tract 1126, Kings County, New York": 6,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 2,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; Asian",
+    "Census Tract 910, Kings County, New York": 1,
+    "Census Tract 918, Kings County, New York": 2,
+    "Census Tract 1126, Kings County, New York": 1,
+    "Census Tract 1130, Kings County, New York": 2,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 2,
+    "Census Tract 1130, Kings County, New York": 3,
+    "Census Tract 1132, Kings County, New York": 1,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; American Indian and Alaska Native; Asian",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 2,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 1,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; American Indian and Alaska Native; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Asian; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Asian; Some Other Race",
+    "Census Tract 910, Kings County, New York": 2,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; American Indian and Alaska Native; Asian",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; American Indian and Alaska Native; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; Asian; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; Asian; Some Other Race",
+    "Census Tract 910, Kings County, New York": 2,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 1,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "American Indian and Alaska Native; Asian; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Population of four races:",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 1,
+    "Census Tract 1126, Kings County, New York": 1,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; American Indian and Alaska Native; Asian",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 1,
+    "Census Tract 1126, Kings County, New York": 1,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; American Indian and Alaska Native; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; Asian; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; Asian; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; American Indian and Alaska Native; Asian; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; American Indian and Alaska Native; Asian; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Population of five races:",
+    "Census Tract 910, Kings County, New York": 1,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 910, Kings County, New York": 1,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; American Indian and Alaska Native; Asian; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Population of six races:",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 910, Kings County, New York": 0,
+    "Census Tract 918, Kings County, New York": 0,
+    "Census Tract 1126, Kings County, New York": 0,
+    "Census Tract 1130, Kings County, New York": 0,
+    "Census Tract 1132, Kings County, New York": 0,
+    "Census Tract 1134, Kings County, New York": 0
+  }
+]

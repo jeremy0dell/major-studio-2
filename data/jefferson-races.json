@@ -1,0 +1,659 @@
+[
+  {
+    "Label (Grouping)": "Total:",
+    "Census Tract 427, Kings County, New York": "4,920",
+    "Census Tract 429, Kings County, New York": "5,556",
+    "Census Tract 445, Kings County, New York": "4,207",
+    "Census Tract 447, Kings County, New York": "2,459",
+    "Census Tract 453, Kings County, New York": "1,886",
+    "Census Tract 539.01, Queens County, New York": "3,968"
+  },
+  {
+    "Label (Grouping)": "Hispanic or Latino",
+    "Census Tract 427, Kings County, New York": "2,658",
+    "Census Tract 429, Kings County, New York": "3,282",
+    "Census Tract 445, Kings County, New York": "2,160",
+    "Census Tract 447, Kings County, New York": "1,080",
+    "Census Tract 453, Kings County, New York": 694,
+    "Census Tract 539.01, Queens County, New York": "1,881"
+  },
+  {
+    "Label (Grouping)": "Not Hispanic or Latino:",
+    "Census Tract 427, Kings County, New York": "2,262",
+    "Census Tract 429, Kings County, New York": "2,274",
+    "Census Tract 445, Kings County, New York": "2,047",
+    "Census Tract 447, Kings County, New York": "1,379",
+    "Census Tract 453, Kings County, New York": "1,192",
+    "Census Tract 539.01, Queens County, New York": "2,087"
+  },
+  {
+    "Label (Grouping)": "Population of one race:",
+    "Census Tract 427, Kings County, New York": "2,112",
+    "Census Tract 429, Kings County, New York": "2,097",
+    "Census Tract 445, Kings County, New York": "1,913",
+    "Census Tract 447, Kings County, New York": "1,321",
+    "Census Tract 453, Kings County, New York": "1,113",
+    "Census Tract 539.01, Queens County, New York": "1,996"
+  },
+  {
+    "Label (Grouping)": "White alone",
+    "Census Tract 427, Kings County, New York": "1,523",
+    "Census Tract 429, Kings County, New York": "1,498",
+    "Census Tract 445, Kings County, New York": "1,100",
+    "Census Tract 447, Kings County, New York": 805,
+    "Census Tract 453, Kings County, New York": 827,
+    "Census Tract 539.01, Queens County, New York": "1,174"
+  },
+  {
+    "Label (Grouping)": "Black or African American alone",
+    "Census Tract 427, Kings County, New York": 240,
+    "Census Tract 429, Kings County, New York": 170,
+    "Census Tract 445, Kings County, New York": 111,
+    "Census Tract 447, Kings County, New York": 357,
+    "Census Tract 453, Kings County, New York": 180,
+    "Census Tract 539.01, Queens County, New York": 104
+  },
+  {
+    "Label (Grouping)": "American Indian and Alaska Native alone",
+    "Census Tract 427, Kings County, New York": 8,
+    "Census Tract 429, Kings County, New York": 10,
+    "Census Tract 445, Kings County, New York": 18,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 6,
+    "Census Tract 539.01, Queens County, New York": 3
+  },
+  {
+    "Label (Grouping)": "Asian alone",
+    "Census Tract 427, Kings County, New York": 268,
+    "Census Tract 429, Kings County, New York": 361,
+    "Census Tract 445, Kings County, New York": 624,
+    "Census Tract 447, Kings County, New York": 125,
+    "Census Tract 453, Kings County, New York": 74,
+    "Census Tract 539.01, Queens County, New York": 680
+  },
+  {
+    "Label (Grouping)": "Native Hawaiian and Other Pacific Islander alone",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 4,
+    "Census Tract 447, Kings County, New York": 4,
+    "Census Tract 453, Kings County, New York": 4,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Some Other Race alone",
+    "Census Tract 427, Kings County, New York": 73,
+    "Census Tract 429, Kings County, New York": 58,
+    "Census Tract 445, Kings County, New York": 56,
+    "Census Tract 447, Kings County, New York": 30,
+    "Census Tract 453, Kings County, New York": 22,
+    "Census Tract 539.01, Queens County, New York": 35
+  },
+  {
+    "Label (Grouping)": "Population of two or more races:",
+    "Census Tract 427, Kings County, New York": 150,
+    "Census Tract 429, Kings County, New York": 177,
+    "Census Tract 445, Kings County, New York": 134,
+    "Census Tract 447, Kings County, New York": 58,
+    "Census Tract 453, Kings County, New York": 79,
+    "Census Tract 539.01, Queens County, New York": 91
+  },
+  {
+    "Label (Grouping)": "Population of two races:",
+    "Census Tract 427, Kings County, New York": 143,
+    "Census Tract 429, Kings County, New York": 168,
+    "Census Tract 445, Kings County, New York": 126,
+    "Census Tract 447, Kings County, New York": 54,
+    "Census Tract 453, Kings County, New York": 72,
+    "Census Tract 539.01, Queens County, New York": 85
+  },
+  {
+    "Label (Grouping)": "White; Black or African American",
+    "Census Tract 427, Kings County, New York": 44,
+    "Census Tract 429, Kings County, New York": 20,
+    "Census Tract 445, Kings County, New York": 22,
+    "Census Tract 447, Kings County, New York": 10,
+    "Census Tract 453, Kings County, New York": 9,
+    "Census Tract 539.01, Queens County, New York": 12
+  },
+  {
+    "Label (Grouping)": "White; American Indian and Alaska Native",
+    "Census Tract 427, Kings County, New York": 8,
+    "Census Tract 429, Kings County, New York": 11,
+    "Census Tract 445, Kings County, New York": 10,
+    "Census Tract 447, Kings County, New York": 2,
+    "Census Tract 453, Kings County, New York": 10,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Asian",
+    "Census Tract 427, Kings County, New York": 48,
+    "Census Tract 429, Kings County, New York": 79,
+    "Census Tract 445, Kings County, New York": 36,
+    "Census Tract 447, Kings County, New York": 25,
+    "Census Tract 453, Kings County, New York": 31,
+    "Census Tract 539.01, Queens County, New York": 38
+  },
+  {
+    "Label (Grouping)": "White; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 427, Kings County, New York": 1,
+    "Census Tract 429, Kings County, New York": 1,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 2,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 1
+  },
+  {
+    "Label (Grouping)": "White; Some Other Race",
+    "Census Tract 427, Kings County, New York": 14,
+    "Census Tract 429, Kings County, New York": 32,
+    "Census Tract 445, Kings County, New York": 25,
+    "Census Tract 447, Kings County, New York": 7,
+    "Census Tract 453, Kings County, New York": 13,
+    "Census Tract 539.01, Queens County, New York": 12
+  },
+  {
+    "Label (Grouping)": "Black or African American; American Indian and Alaska Native",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 1,
+    "Census Tract 445, Kings County, New York": 4,
+    "Census Tract 447, Kings County, New York": 2,
+    "Census Tract 453, Kings County, New York": 1,
+    "Census Tract 539.01, Queens County, New York": 5
+  },
+  {
+    "Label (Grouping)": "Black or African American; Asian",
+    "Census Tract 427, Kings County, New York": 7,
+    "Census Tract 429, Kings County, New York": 5,
+    "Census Tract 445, Kings County, New York": 9,
+    "Census Tract 447, Kings County, New York": 1,
+    "Census Tract 453, Kings County, New York": 5,
+    "Census Tract 539.01, Queens County, New York": 7
+  },
+  {
+    "Label (Grouping)": "Black or African American; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 1,
+    "Census Tract 445, Kings County, New York": 1,
+    "Census Tract 447, Kings County, New York": 1,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; Some Other Race",
+    "Census Tract 427, Kings County, New York": 15,
+    "Census Tract 429, Kings County, New York": 13,
+    "Census Tract 445, Kings County, New York": 7,
+    "Census Tract 447, Kings County, New York": 2,
+    "Census Tract 453, Kings County, New York": 3,
+    "Census Tract 539.01, Queens County, New York": 5
+  },
+  {
+    "Label (Grouping)": "American Indian and Alaska Native; Asian",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 2,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 3
+  },
+  {
+    "Label (Grouping)": "American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "American Indian and Alaska Native; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 3,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Asian; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 3,
+    "Census Tract 445, Kings County, New York": 2,
+    "Census Tract 447, Kings County, New York": 1,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Asian; Some Other Race",
+    "Census Tract 427, Kings County, New York": 6,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 7,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 2
+  },
+  {
+    "Label (Grouping)": "Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 1,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Population of three races:",
+    "Census Tract 427, Kings County, New York": 7,
+    "Census Tract 429, Kings County, New York": 9,
+    "Census Tract 445, Kings County, New York": 8,
+    "Census Tract 447, Kings County, New York": 1,
+    "Census Tract 453, Kings County, New York": 7,
+    "Census Tract 539.01, Queens County, New York": 5
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; American Indian and Alaska Native",
+    "Census Tract 427, Kings County, New York": 1,
+    "Census Tract 429, Kings County, New York": 5,
+    "Census Tract 445, Kings County, New York": 5,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 1,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; Asian",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 2,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 1,
+    "Census Tract 453, Kings County, New York": 2,
+    "Census Tract 539.01, Queens County, New York": 1
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 1,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 3,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; American Indian and Alaska Native; Asian",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 1,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; American Indian and Alaska Native; Some Other Race",
+    "Census Tract 427, Kings County, New York": 1,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Asian; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 427, Kings County, New York": 2,
+    "Census Tract 429, Kings County, New York": 1,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Asian; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 1,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 2
+  },
+  {
+    "Label (Grouping)": "White; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; American Indian and Alaska Native; Asian",
+    "Census Tract 427, Kings County, New York": 1,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 2
+  },
+  {
+    "Label (Grouping)": "Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; American Indian and Alaska Native; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; Asian; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 1,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; Asian; Some Other Race",
+    "Census Tract 427, Kings County, New York": 2,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 1,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "American Indian and Alaska Native; Asian; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Population of four races:",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 2,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 1
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; American Indian and Alaska Native; Asian",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; American Indian and Alaska Native; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 2,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 1
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; Asian; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; Asian; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; American Indian and Alaska Native; Asian; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; American Indian and Alaska Native; Asian; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Population of five races:",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 1,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 1,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; American Indian and Alaska Native; Asian; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Black or African American; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "Population of six races:",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  },
+  {
+    "Label (Grouping)": "White; Black or African American; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+    "Census Tract 427, Kings County, New York": 0,
+    "Census Tract 429, Kings County, New York": 0,
+    "Census Tract 445, Kings County, New York": 0,
+    "Census Tract 447, Kings County, New York": 0,
+    "Census Tract 453, Kings County, New York": 0,
+    "Census Tract 539.01, Queens County, New York": 0
+  }
+]
